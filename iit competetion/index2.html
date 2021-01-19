@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Job Portal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/66e389b6a8.js" crossorigin="anonymous"></script>
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    .navbar
+    {
+        background: linear-gradient(to left, #83a4d4, #b6fbff);
+        
+        
+    }
+    #imgdiv
+    {
+        background: linear-gradient(to left, #83a4d4, #b6fbff);
+        display: flex;
+        height: min-content;
+        
+
+
+
+    }
+    #imgdiv h1
+    {
+        margin-left: 5%;
+        font-size: 3rem;
+        margin-top: 2%;
+        font-family: 'Potta One', cursive;
+        color: white;
+        /* animation: agepiche 1s linear infinite;
+        animation-direction: alternate;
+         */
+
+
+    }
+    /* @keyframes agepiche{
+        from{ padding-left: 40px; padding-top: 6px;}
+        to{ padding-right: 40px; padding-bottom: 5px;}
+    } */
+    #jobimg
+    {
+        background: linear-gradient(to left, #83a4d4, #b6fbff);
+        /* box-shadow: black 3px 3px 3px; */
+        
+    }
+   
+    @media (min-width: 1px)and (max-width: 740px)
+    {
+        #imgdiv img
+        {
+            width: 50%;
+        }
+        #imgdiv h1
+        {
+            font-size: 1.5rem;
+        }
+    }
+    @media (max-width: 321px)
+    {
+        #imgdiv h1
+        {
+            font-size: 1rem;
+        }
+
+    }
+    @media(min-width: 322px)and (max-width: 376px)
+    {
+        #imgdiv h1
+        {
+            font-size: 1.3rem;
+        }
+
+    }
+
+    @media (max-width: 564px)
+    {
+        #imgdiv h1 
+        {
+            margin-top: 0.5px;
+        }
+    }
+    .nav-link
+    {
+        font-family: 'Syne', sans-serif;
+       
+
+    }
+  
+   .dropdown-item
+   {
+    font-family: 'Syne', sans-serif;
+
+   }
+   .navbar-brand
+   {
+       font-size: x-large;
+   }
+   .roww
+   {
+       display: flex;
+       flex-wrap: wrap;
+
+   }
+   #jobcategory
+   {
+       text-align: center;
+       font-family: 'Yusei Magic', sans-serif;
+       text-shadow: black;
+       text-decoration: underline;
+       /* font-weight: bold; */
+   }
+   #designimg
+   {
+       width: 50%;
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+
+   }
+   .card-title
+   {
+       text-align: center;
+   }
+   .card 
+   {
+       border-style: hidden;
+   }
+   .cardtext
+   {
+       text-align: center;
+      
+   }
+   .card-body img 
+   {
+      box-shadow: black 3px 3px 3px;
+   }
+   .navabar-nav li a 
+   {
+       float: right;
+   }
+   .topcompany
+   {
+       text-align: center;
+       font-family: 'Yusei Magic', sans-serif;
+       text-decoration: underline;
+   }
+   #cmpny img
+   {
+       width: 100%;
+       box-shadow: none;
+
+   }
+   #jobid
+   {
+       border: 2px solid black;
+       text-align: center;
+
+   }
+   #jobid2
+   {
+       border: 0.5px solid black;
+       text-align: center;
+       border-style: dotted;
+
+   }
+   #jobid3
+   {
+       border: 0.5px solid black;
+       text-align: center;
+       border-style: dotted;
+    
+
+   }
+   #jobid4
+   {
+       border: 0.5px solid black;
+       text-align: center;
+       border-style: dotted;
+
+   }
+   #jobid5
+   {
+       border: 0.5px solid black;
+       text-align: center;
+       border-style: dotted;
+
+   }
+   .post
+   {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       text-align: left;
+   }
+   #footer
+   {
+       text-align: center;
+       background-color: black;
+       color: gray;
+       width: 100vmax;
+       /* color: gray; */
+   }
+   .col-4
+   {
+     background: linear-gradient(to left, #83a4d4, #b6fbff);
+   }
+  
+
+  
+   
+   
+   
+  
+</style>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" style="color: blueviolet; font-weight:900;">ONLINE JOB PORTAL</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-three-dots text-light" viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cmpny">Top Recruiters</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#jobid2">Designing</a>
+                <a class="dropdown-item" href="#business">Business & Marketing</a>
+                <!-- <div class="dropdown-divider"></div> -->
+                <a class="dropdown-item" href="#jobid4">IT & Software</a>
+                <a class="dropdown-item" href="#jobid5">Work From Home</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#postjob" tabindex="-1" aria-disabled="true">Sign Up</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Jobs" aria-label="Search">
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+      <section>
+          <div class="container-fluid" id="imgdiv">
+           <img src="job2.jpg" alt="job" id="jobimg" style="border-radius: 1851px 471px 1656px 1394px; margin-left: 10%;" class="animate__animated animate__pulse"> <br>
+              <h1 class="animate__animated animate__rubberBand">Start Your New Career With Our Online Job Portal For Free!</h1> 
+             
+          </div>
+          
+      </section>
+
+    
+
+
+      <section class="jobsection">
+          <div class="container-fluid">
+              <h2 id="jobcategory">Why Choose Us?</h2>
+          </div>
+         
+
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card" id="designcard">
+                <div class="card-body">
+                  <!-- <h4 class="card-title" id="designtitle">Designing</h4> -->
+                  <img src="https://img.freepik.com/free-vector/choosing-person-hiring-job-staff-human-recruitment-select-people-resource-recruit-vector-illustration_1284-47089.jpg?size=626&ext=jpg&ga=GA1.2.531874579.1610782935" alt="design" id="designimg">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <h4 class="cardtext">Search Millions of Jobs</h4>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Special title treatment</h5> -->
+                  <img src="https://img.freepik.com/free-vector/woman-working-with-laptop-beanchair-room-illustration_24911-61700.jpg?size=626&ext=jpg&ga=GA1.2.531874579.1610782935" alt="iobimg" id="designimg">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  <h4 class="cardtext">Easy To Manage Jobs</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Special title treatment</h5> -->
+                  <img src="https://img.freepik.com/free-vector/business-leader-standing-arrow-holding-flag-flat-vector-illustration-cartoon-people-training-doing-business-plan-leadership-victory-challenge-concept_74855-9812.jpg?size=626&ext=jpg&ga=GA1.2.531874579.1610782935" alt="iobimg" id="designimg">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                  <h4 class="cardtext">Top Careers</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <!-- ALL COMPANIES -->
+ 
+      <section class="companies" id="allcmpny">
+          <h2 class="topcompany">Top Recruiters</h2>
+          <div class="row">
+            <div class="col-6 col-sm-3">
+              <div class="card" id="cmpny">
+                <div class="card-body">
+                  <!-- <h4 class="card-title" id="designtitle">Designing</h4> -->
+                  <img src="data:image/png;base64,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" alt="design" id="designimg">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <h4 class="cardtext">Amazon In.</h4>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="card" id="cmpny">
+                <div class="card-body">
+                  <!-- <h4 class="card-title" id="designtitle">Designing</h4> -->
+                  <img src="data:image/png;base64,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" alt="design" id="designimg">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <h4 class="cardtext">Microsoft</h4>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="card" id="cmpny">
+                <div class="card-body">
+                  <!-- <h4 class="card-title" id="designtitle">Designing</h4> -->
+                  <img src="data:image/png;base64,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" alt="design" id="designimg">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <h4 class="cardtext">IBM</h4>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="card" id="cmpny">
+                <div class="card-body">
+                  <!-- <h4 class="card-title" id="designtitle">Designing</h4> -->
+                  <img src="data:image/png;base64,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" alt="design" id="designimg">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <h4 class="cardtext">Adobe In.</h4>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="card" id="cmpny">
+                <div class="card-body">
+                  <!-- <h4 class="card-title" id="designtitle">Designing</h4> -->
+                  <img src="data:image/jpeg;base64,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" alt="design" id="designimg">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <h4 class="cardtext">FedEx</h4>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="card" id="cmpny">
+                <div class="card-body">
+                  <!-- <h4 class="card-title" id="designtitle">Designing</h4> -->
+                  <img src="data:image/jpeg;base64,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" alt="design" id="designimg">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <h4 class="cardtext">Myntra</h4>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="card" id="cmpny">
+                <div class="card-body">
+                  <!-- <h4 class="card-title" id="designtitle">Designing</h4> -->
+                  <img src="data:image/png;base64,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" alt="design" id="designimg">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <h4 class="cardtext">DTDC</h4>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="card" id="cmpny">
+                <div class="card-body">
+                  <!-- <h4 class="card-title" id="designtitle">Designing</h4> -->
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh7Rd_P-2kXCukCudYYUXsAImlxzQ6-ryeqg&usqp=CAU" alt="design" id="designimg">
+                  <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                  <h4 class="cardtext">Lenskart</h4>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+            </div>
+            </div>
+
+      </section>
+  <br>
+      <section>
+          <div class="container-fluid">
+              <h2 class="topcompany">Popular Jobs</h2>
+          </div>
+          <div class="row">
+              <div class="col-4" id="jobid"><b>RECRUITER</b></div>
+              <div class="col-4" id="jobid"><b>Job</b></div>
+              <div class="col-4" id="jobid"><b>Salary</b></div>
+          </div>
+          <div class="row" id="designid">
+              <div class="col-4" id="jobid2"><b> Amazon</b><span class="badge badge-warning">New</span></div>
+              <div class="col-4" id="jobid2"><b>Graphic Designing</b></div>
+              <div class="col-4" id="jobid2"><b>10k-25k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+          </div>
+          <div class="row" id="designid">
+              <div class="col-4" id="jobid2"><b> Google</b><span class="badge badge-warning">New</span></div>
+              <div class="col-4" id="jobid2"><b>Illustration Designing</b></div>
+              <div class="col-4" id="jobid2"><b>20k-35k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+          </div>
+          <div class="row" id="designid">
+              <div class="col-4" id="jobid2"><b> Adobe</b><span class="badge badge-warning">New</span></div>
+              <div class="col-4" id="jobid2"><b>Interior Designing</b></div>
+              <div class="col-4" id="jobid2"><b>20k-35k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+          </div>
+          <div class="row" id="designid">
+              <div class="col-4" id="jobid2"><b> Microsoft</b><span class="badge badge-warning">New</span></div>
+              <div class="col-4" id="jobid2"><b>Front-end Designing</b></div>
+              <div class="col-4" id="jobid2"><b>30k-40k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+          </div>
+
+
+
+          <div class="row" id="business">
+              <div class="col-4" id="jobid3"><b>Airtel</b></div>
+              <div class="col-4" id="jobid3"><b>Affiliate Marketer</b></div>
+              <div class="col-4" id="jobid3"><b>20k-32k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+          </div>
+          <div class="row" id="business">
+              <div class="col-4" id="jobid3"><b>Reliance</b></div>
+              <div class="col-4" id="jobid3"><b>Sales & Marketing Proffesional</b></div>
+              <div class="col-4" id="jobid3"><b>15k-28k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+          </div>
+          <div class="row" id="business">
+              <div class="col-4" id="jobid3"><b>Jio</b></div>
+              <div class="col-4" id="jobid3"><b>Brand/Product Manager</b></div>
+              <div class="col-4" id="jobid3"><b>15k-20k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+          </div>
+
+
+
+          <div class="row">
+              <div class="col-4" id="jobid4"><b>IBM</b><span class="badge badge-warning">New</span></div>
+              <div class="col-4" id="jobid4"><b>Data Analyst</b></div>
+              <div class="col-4" id="jobid4"><b>40k-45k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+          </div>
+          <div class="row">
+              <div class="col-4" id="jobid4"><b>Samsung</b><span class="badge badge-warning">New</span></div>
+              <div class="col-4" id="jobid4"><b>Software Developer</b></div>
+              <div class="col-4" id="jobid4"><b>40k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+          </div>
+          <div class="row">
+              <div class="col-4" id="jobid4"><b>Quest Innovations</b></div>
+              <div class="col-4" id="jobid4"><b>BackEnd Developer</b></div>
+              <div class="col-4" id="jobid4"><b>30k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+          </div>
+
+
+
+
+          <div class="row">
+              <div class="col-4" id="jobid5"><b>Vodafone</b></div>
+              <div class="col-4" id="jobid5"><b>Telecaller</b></div>
+              <div class="col-4" id="jobid5"><b>5k-10k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+
+          </div>
+          <div class="row">
+              <div class="col-4" id="jobid5"><b>Whatsapp</b></div>
+              <div class="col-4" id="jobid5"><b>Call Agnet</b></div>
+              <div class="col-4" id="jobid5"><b>10k-12k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+
+          </div>
+          <div class="row">
+              <div class="col-4" id="jobid5"><b>HR</b><span class="badge badge-warning">New</span></div>
+              <div class="col-4" id="jobid5"><b>Data Entry</b></div>
+              <div class="col-4" id="jobid5"><b>5k-10k</b><h6><a href="#apply"><span class="badge badge-primary">Apply now</span></a></h6></div>
+
+          </div>
+      </section>
+<br>
+
+
+      <section>
+          <div class="container-fluid">
+             <h2 class="post" id="postjob">POST A JOB:-</h2>
+             <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Job title</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Job title">
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">Category</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>Designing</option>
+                      <option>Business&Marketing</option>
+                      <option>Software & IT</option>
+                      <option>Work From Home</option>
+                    </select>
+                  </div>
+                 
+                </div>
+               
+                <button type="submit" class="btn btn-primary">Post</button>
+              </form>
+
+          </div>
+      </section>
+      <br>
+      <section>
+          <div class="container-fluid">
+             <h2 class="post" id="apply">APPLY:-</h2>
+             <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Name</label>
+                        <input type="name" class="form-control" id="inputEmail4">
+                      </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Job title</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Job title">
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">Category</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>Designing</option>
+                      <option>Business&Marketing</option>
+                      <option>Software & IT</option>
+                      <option>Work From Home</option>
+                    </select>
+                  </div>
+                 
+                </div>
+               
+                <button type="submit" class="btn btn-primary">Apply</button>
+              </form>
+
+          </div>
+      </section>
+
+
+   <br>
+      
+          <div class="container-fluid">
+
+          <h6 id="footer">  Copyrights &copy; 2021; All Rights Reserved <br> www.onlinejobportal.com
+         </h6>       
+          </div>
+      
+
+         
+    
+</body>
+</html>
